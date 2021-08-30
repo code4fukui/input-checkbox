@@ -1,0 +1,62 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>input-checkbox tag</title>
+<body style="margin: 2em;">
+
+<h1>input-checkbox tag</h1>
+<script type="module" src="./input-checkbox.js"></script>
+
+<input-checkbox id="ic1">ABC</input-checkbox>
+<input-checkbox id="ic2">DEF</input-checkbox>
+<input-checkbox id="ic3">GHI</input-checkbox>
+
+<button id=chg>change</button>
+<button id=set>set</button>
+
+<script type="module">
+ic1.onchange = ic2.onchange = ic3.onchange = () => {
+  console.log(ic1.checked, ic2.checked, ic3.checked);
+};
+chg.onclick = () => {
+  ic1.innerHTML = "あいう";
+};
+set.onclick = () => {
+  ic1.checked = true;
+};
+</script>
+  
+<hr>
+
+<input-checkbox id="inputcheckbox2">
+  <option>ABC</option><br>
+  <option selected>DEF</option><br>
+  <option>GHI</option><br>
+</input-checkbox>
+
+<hr>
+
+<input-checkbox id="inputcheckbox3">
+  <label><input type=checkbox checked>ABC</label><br>
+  <option>DEF</option><br>
+  <option>GHI</option><br>
+</input-checkbox>
+
+<hr>
+
+<button id="sakuracss">sakura.css</button>
+
+<script type="module">
+import { css } from "https://js.sabae.cc/stdom.js";
+sakuracss.onclick = () => {
+  const link = document.head.querySelector("link");
+  if (link) {
+    link.remove();
+  } else {
+    css("https://unpkg.com/sakura.css/css/sakura.css");
+  }
+};
+</script>
+
+<hr>
+<style>a { color: gray !important }</style>
+App: <a href=https://fukuno.jig.jp/3270>福野泰介の一日一創</a> (<a href=https://github.com/code4fukui/input-checkbox>input-checkbox tag - src on GitHub</a>)<br>
+</body>
