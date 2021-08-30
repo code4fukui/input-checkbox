@@ -15,7 +15,6 @@ class InputCheckbox extends HTMLElement {
     chk.checked = checked;
     chk.id = Math.random();
     this.chk = chk;
-    //label.appendChild(radio);
     const span = document.createElement("span");
     label.appendChild(span);
     label.setAttribute("for", chk.id);
@@ -23,7 +22,6 @@ class InputCheckbox extends HTMLElement {
       span.appendChild(c);
     });
     
-    //opt.parentNode.replaceChild(label, opt);
     c.appendChild(chk);
     c.appendChild(label);
     this.innerHTML = "";
