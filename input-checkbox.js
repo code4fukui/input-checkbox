@@ -1,6 +1,9 @@
 class InputCheckbox extends HTMLElement {
-  constructor() {
+  constructor(s) {
     super();
+    if (s !== undefined) {
+      this.textContent = s;
+    }
     this._replace();
   }
   _replace() {
