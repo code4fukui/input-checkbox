@@ -1,15 +1,15 @@
 class InputCheckbox extends HTMLElement {
-  constructor(s) {
+  constructor(s, checked) {
     super();
     if (s !== undefined) {
       this.textContent = s;
     }
-    this._replace();
+    this._replace(checked);
   }
-  _replace() {
+  _replace(chked) {
     this.opts = [];
 
-    const checked = this.getAttribute("checked");
+    const checked = chked !== undefined ? chked : this.getAttribute("checked");
     
     const c = document.createElement("span");
     const label = document.createElement("label");
