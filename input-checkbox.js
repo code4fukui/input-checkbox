@@ -1,4 +1,4 @@
-class InputCheckbox extends HTMLElement {
+export class InputCheckbox extends HTMLElement {
   constructor(s, checked) {
     super();
     if (s !== undefined) {
