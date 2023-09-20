@@ -79,5 +79,3 @@ export class InputCheckbox extends HTMLElement {
 }
 
 customElements.define("input-checkbox", InputCheckbox);
-
-export { InputCheckbox };
