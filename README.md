@@ -1,5 +1,7 @@
 # input-checkbox
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 An input checkbox custom HTML element.
 
 ## Demo
